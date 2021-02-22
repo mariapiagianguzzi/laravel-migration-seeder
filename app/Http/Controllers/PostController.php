@@ -8,3 +8,4 @@ class PostController extends Controller
 {
     //
 }
+
