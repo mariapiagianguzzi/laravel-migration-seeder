@@ -11,7 +11,7 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
-        $students = [
+      /*   $students = [
             [
                 'name' => 'Angela',
                 'lastname' => 'Gallo',
@@ -25,7 +25,8 @@ class StudentSeeder extends Seeder
                 'lastname' => 'Baldassarre',
             ],
             
-        ];
+        ]; */
+        $students = config('stud');
 
 
         foreach ($students as $student) {
