@@ -10,7 +10,8 @@ class StudentSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+
+    public function run(Faker $faker)
     {
       /*   $students = [
             [
@@ -27,7 +28,7 @@ class StudentSeeder extends Seeder
             ],
             
         ]; */
-        $students = config('stud');
+      /*   $students = config('stud');
 
 
 
@@ -36,11 +37,11 @@ class StudentSeeder extends Seeder
             $newStudent->name = $student['name'];
             $newStudent->lastname = $student['lastname'];
             $newStudent->save();
-        }
+        } */
         for ($i = 0; $i < 3; $i++) {
             $newStudent = new Student();
-            $newStudent->name = $faker->word();
-            $newStudent->lastname = $faker->word();
+            $newStudent->name = $faker->name();
+            $newStudent->lastname = $faker->lastname();
             $newStudent->save();
         }
     }
